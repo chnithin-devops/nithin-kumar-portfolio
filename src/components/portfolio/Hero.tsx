@@ -1,20 +1,20 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { Download, ArrowRight, Mail, Sparkles } from "lucide-react";
-import { SiMicrosoftazure, SiAmazon, SiDocker, SiKubernetes, SiTerraform, SiGit, SiLinux, SiJenkins, SiAzuredevops } from "react-icons/si";
+import { Download, ArrowRight, Mail, Sparkles, Cloud, Server } from "lucide-react";
+import { SiDocker, SiKubernetes, SiTerraform, SiGit, SiLinux, SiJenkins, SiGithubactions } from "react-icons/si";
 import { PROFILE, PROFILE_IMG, RESUME_URL } from "@/lib/portfolio-data";
 import { scrollToId } from "@/lib/scroll";
 
 const FLOATING_ICONS = [
-  { Icon: SiMicrosoftazure, color: "#3B82F6", x: "-8%", y: "8%" },
-  { Icon: SiAmazon, color: "#F59E0B", x: "92%", y: "12%" },
-  { Icon: SiDocker, color: "#2496ED", x: "-14%", y: "45%" },
-  { Icon: SiKubernetes, color: "#326CE5", x: "96%", y: "40%" },
-  { Icon: SiTerraform, color: "#7B42BC", x: "-6%", y: "82%" },
-  { Icon: SiGit, color: "#F1502F", x: "88%", y: "78%" },
-  { Icon: SiLinux, color: "#FFCC33", x: "40%", y: "-8%" },
-  { Icon: SiJenkins, color: "#D33833", x: "60%", y: "102%" },
-  { Icon: SiAzuredevops, color: "#0078D4", x: "10%", y: "100%" },
+  { Icon: Cloud, color: "#3B82F6", x: "-8%", y: "8%", label: "Azure" },
+  { Icon: Server, color: "#F59E0B", x: "92%", y: "12%", label: "AWS" },
+  { Icon: SiDocker, color: "#2496ED", x: "-14%", y: "45%", label: "Docker" },
+  { Icon: SiKubernetes, color: "#326CE5", x: "96%", y: "40%", label: "Kubernetes" },
+  { Icon: SiTerraform, color: "#7B42BC", x: "-6%", y: "82%", label: "Terraform" },
+  { Icon: SiGit, color: "#F1502F", x: "88%", y: "78%", label: "Git" },
+  { Icon: SiLinux, color: "#FFCC33", x: "40%", y: "-8%", label: "Linux" },
+  { Icon: SiJenkins, color: "#D33833", x: "60%", y: "102%", label: "Jenkins" },
+  { Icon: SiGithubactions, color: "#2088FF", x: "10%", y: "100%", label: "Azure DevOps" },
 ];
 
 export function Hero() {
