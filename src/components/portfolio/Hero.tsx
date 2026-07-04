@@ -163,6 +163,8 @@ export function Hero() {
                 }}
                 className="absolute -translate-x-1/2 -translate-y-1/2 grid h-12 w-12 sm:h-14 sm:w-14 place-items-center rounded-2xl glass-strong shadow-card"
                 style={{ left: x, top: y }}
+                title={label}
+                aria-label={label}
               >
                 <Icon size={24} style={{ color }} />
               </motion.div>
