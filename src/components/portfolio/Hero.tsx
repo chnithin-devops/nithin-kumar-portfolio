@@ -151,7 +151,7 @@ export function Hero() {
               />
             </div>
 
-            {FLOATING_ICONS.map(({ Icon, color, x, y }, i) => (
+            {FLOATING_ICONS.map(({ Icon, color, x, y, label }, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, scale: 0 }}
