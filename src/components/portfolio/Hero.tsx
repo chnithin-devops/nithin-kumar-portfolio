@@ -147,9 +147,8 @@ export function Hero() {
               <img
                 src={PROFILE_IMG}
                 alt="Nithin Kumar — DevOps Engineer"
-                className="h-full w-full object-cover"
+                className="h-full w-full object-cover object-[center_35%] scale-110"
               />
-
             </div>
 
             {FLOATING_ICONS.map(({ Icon, color, x, y, label }, i) => (
