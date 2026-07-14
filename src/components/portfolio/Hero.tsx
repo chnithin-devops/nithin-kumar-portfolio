@@ -147,7 +147,7 @@ export function Hero() {
               <img
                 src={PROFILE_IMG}
                 alt="Nithin Kumar — DevOps Engineer"
-                className="h-full w-full object-cover object-[center_45%] scale-105"
+                className="h-full w-full object-cover"
               />
 
             </div>
