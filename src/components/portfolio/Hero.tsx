@@ -172,12 +172,12 @@ export function Hero() {
                   scale: { delay: 0.8 + i * 0.08 },
                   y: { duration: 3 + i * 0.2, repeat: Infinity, ease: "easeInOut" },
                 }}
-                className="absolute -translate-x-1/2 -translate-y-1/2 grid h-12 w-12 sm:h-14 sm:w-14 place-items-center rounded-2xl glass-strong shadow-card"
+                className="absolute -translate-x-1/2 -translate-y-1/2 grid h-10 w-10 sm:h-11 sm:w-11 place-items-center rounded-full glass-strong shadow-card"
                 style={{ left: x, top: y }}
                 title={label}
                 aria-label={label}
               >
-                <Icon size={24} style={{ color }} />
+                <Icon size={18} style={{ color }} />
               </motion.div>
             ))}
           </motion.div>
