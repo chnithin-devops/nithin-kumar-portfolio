@@ -1,8 +1,8 @@
 import resumeAsset from "@/assets/resume.pdf.asset.json";
-import profileCroppedAsset from "@/assets/profile-cropped.webp.asset.json";
+import profileAsset from "@/assets/nithin-profile.png.asset.json";
 
 export const RESUME_URL = resumeAsset.url;
-export const PROFILE_IMG = profileCroppedAsset.url;
+export const PROFILE_IMG = profileAsset.url;
 
 export const PROFILE = {
   name: "Nithin Kumar",
