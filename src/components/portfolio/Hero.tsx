@@ -5,17 +5,28 @@ import { SiDocker, SiKubernetes, SiTerraform, SiGit, SiLinux, SiJenkins, SiGithu
 import { PROFILE, PROFILE_IMG, RESUME_URL } from "@/lib/portfolio-data";
 import { scrollToId } from "@/lib/scroll";
 
-const FLOATING_ICONS = [
-  { Icon: Cloud, color: "#3B82F6", x: "-8%", y: "8%", label: "Azure" },
-  { Icon: Server, color: "#F59E0B", x: "92%", y: "12%", label: "AWS" },
-  { Icon: SiDocker, color: "#2496ED", x: "-14%", y: "45%", label: "Docker" },
-  { Icon: SiKubernetes, color: "#326CE5", x: "96%", y: "40%", label: "Kubernetes" },
-  { Icon: SiTerraform, color: "#7B42BC", x: "-6%", y: "82%", label: "Terraform" },
-  { Icon: SiGit, color: "#F1502F", x: "88%", y: "78%", label: "Git" },
-  { Icon: SiLinux, color: "#FFCC33", x: "40%", y: "-8%", label: "Linux" },
-  { Icon: SiJenkins, color: "#D33833", x: "60%", y: "102%", label: "Jenkins" },
-  { Icon: SiGithubactions, color: "#2088FF", x: "10%", y: "100%", label: "Azure DevOps" },
+const RAW_ICONS = [
+  { Icon: Cloud, color: "#3B82F6", label: "Azure" },
+  { Icon: Server, color: "#F59E0B", label: "AWS" },
+  { Icon: SiDocker, color: "#2496ED", label: "Docker" },
+  { Icon: SiKubernetes, color: "#326CE5", label: "Kubernetes" },
+  { Icon: SiTerraform, color: "#7B42BC", label: "Terraform" },
+  { Icon: SiGit, color: "#F1502F", label: "Git" },
+  { Icon: SiLinux, color: "#FFCC33", label: "Linux" },
+  { Icon: SiJenkins, color: "#D33833", label: "Jenkins" },
+  { Icon: SiGithubactions, color: "#2088FF", label: "GitHub Actions" },
 ];
+
+// Evenly distribute icons around the circle's circumference so none overlap the photo.
+const ORBIT_RADIUS = 52; // % from center — sits just on the ring edge
+const FLOATING_ICONS = RAW_ICONS.map((item, i) => {
+  const angle = (i / RAW_ICONS.length) * Math.PI * 2 - Math.PI / 2;
+  return {
+    ...item,
+    x: `${50 + ORBIT_RADIUS * Math.cos(angle)}%`,
+    y: `${50 + ORBIT_RADIUS * Math.sin(angle)}%`,
+  };
+});
 
 export function Hero() {
   const [displayText, setDisplayText] = useState("");
