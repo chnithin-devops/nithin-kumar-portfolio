@@ -18,7 +18,7 @@ const RAW_ICONS = [
 ];
 
 // Evenly distribute icons just outside the circle so they float on the outer ring.
-const ORBIT_RADIUS = 58; // % from center — right outside the photo circle border
+const ORBIT_RADIUS = 55; // % from center — tight float just outside the photo circle
 const FLOATING_ICONS = RAW_ICONS.map((item, i) => {
   const angle = (i / RAW_ICONS.length) * Math.PI * 2 - Math.PI / 2;
   return {
