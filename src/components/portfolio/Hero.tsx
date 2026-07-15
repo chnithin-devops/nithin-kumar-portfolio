@@ -17,8 +17,8 @@ const RAW_ICONS = [
   { Icon: SiGithubactions, color: "#2088FF", label: "GitHub Actions" },
 ];
 
-// Evenly distribute icons around the circle's circumference so none overlap the photo.
-const ORBIT_RADIUS = 52; // % from center — sits just on the ring edge
+// Evenly distribute icons outside the circle so they float on the ring's outer edge.
+const ORBIT_RADIUS = 72; // % from center — sits outside the photo circle
 const FLOATING_ICONS = RAW_ICONS.map((item, i) => {
   const angle = (i / RAW_ICONS.length) * Math.PI * 2 - Math.PI / 2;
   return {
