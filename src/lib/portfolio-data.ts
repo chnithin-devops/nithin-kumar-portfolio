@@ -19,7 +19,7 @@ export const PROFILE = {
   linkedin: "https://www.linkedin.com/in/chnithin",
   github: "https://github.com/chnithin-devops",
   location: "India",
-  availability: "Available for Work",
+  availability: "Available for Opportunities",
 };
 
 export const NAV_ITEMS = [
