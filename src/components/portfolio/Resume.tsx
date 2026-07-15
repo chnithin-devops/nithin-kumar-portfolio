@@ -63,9 +63,9 @@ export function Resume() {
             <Printer size={16} /> Print Resume
           </button>
         </div>
-        <div className="rounded-2xl overflow-hidden bg-white/5 border border-white/10">
+        <div className="rounded-2xl overflow-hidden bg-white border border-white/10">
           <iframe
-            src={`${RESUME_URL}#toolbar=0&navpanes=0`}
+            src={`https://docs.google.com/gview?url=${encodeURIComponent(typeof window !== "undefined" ? new URL(RESUME_URL, window.location.origin).href : RESUME_URL)}&embedded=true`}
             title="Nithin Kumar Resume"
             className="w-full h-[70vh] min-h-[560px]"
           />
